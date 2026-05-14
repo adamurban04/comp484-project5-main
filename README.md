@@ -1,6 +1,6 @@
 # CSUN Map Quiz (Google Maps JavaScript Project)
 
-GitHub Pages: https://adamurban04.github.io/comp484-project5-main/
+GitHub Pages: https://adamurban04.github.io/comp484-project5-main/ (API Key restricted to this website)
 
 This project is a CSUN location-guessing web app built with HTML, CSS, and JavaScript using the Google Maps JavaScript API.
 
