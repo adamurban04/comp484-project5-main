@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSUN Map Quiz</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <!-- Instructions -->
+      <header class="app-header">
+        <h1>CSUN Map Quiz</h1>
+        <p id="instructions">
+          Double-click the <span class="instruction-yellow">yellow</span> area where you think the shown location is. Correct area turns
+          <span class="instruction-green">green</span>, wrong answer turns <span class="instruction-red">red</span>.
+        </p>
+      </header>
+
+      <!-- Live game status block -->
+      <section class="status-panel" aria-live="polite">
+        <p class="status-location"><strong>Current location:</strong> <span id="current-location">Waiting to start...</span></p>
+        <p class="status-round"><strong>Round:</strong> <span id="round">0</span> / 5</p>
+        <p class="status-score"><strong>Score:</strong> <span id="score">0</span></p>
+        <p id="feedback-message" class="feedback-info">Your result will show here after each guess.</p>
+      </section>
+
+      <!-- Main map + HUD overlay -->
+      <section class="map-panel">
+        <div id="map" aria-label="Google map of CSUN"></div>
+        <div id="hud-overlay" class="hud-overlay hidden" aria-live="polite"></div>
+      </section>
+
+      <!-- Bottom controls (icons created as SVG path elements) -->
+      <section class="controls">
+        <div class="controls-left">
+          <button id="sound-toggle" class="icon-button" type="button" aria-label="Mute music and sound effects" title="Mute/Unmute sound">
+            <svg viewBox="0 0 24 24" class="sound-icon" aria-hidden="true">
+              <path class="icon-speaker" d="M4 10h4l5-4v12l-5-4H4z"></path>
+              <path class="icon-wave-1" d="M16.8 9.4a4.5 4.5 0 0 1 0 5.2"></path>
+              <path class="icon-wave-2" d="M19.5 7a8.1 8.1 0 0 1 0 10"></path>
+              <path class="icon-muted" d="M5 5l14 14"></path>
+            </svg>
+          </button>
+          <button id="overlay-toggle" class="icon-button" type="button" aria-label="Show building overlays" title="Toggle building overlays">
+            <svg viewBox="0 0 24 24" class="overlay-icon" aria-hidden="true">
+              <path d="M3 6h18v12H3z"></path>
+              <path d="M3 10h18"></path>
+              <path d="M12 6v12"></path>
+            </svg>
+          </button>
+          <p class="hud-metric"><strong>Time:</strong> <span id="timer">00:00</span></p>
+          <p class="hud-metric"><strong>Accuracy:</strong> <span id="accuracy">0%</span></p>
+        </div>
+        <button id="restart-button" type="button" disabled>Restart Game</button>
+      </section>
+    </main>
+
+    <script src="config.local.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
