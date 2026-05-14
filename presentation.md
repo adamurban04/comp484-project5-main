@@ -1,6 +1,6 @@
 # Google Maps API Features Presentation
 
-## Geometry Library
+## Geometry Library
 - has function containsLocation(), which works with checking whether a click was inside a polygon
 - the buildings are polygons
 
